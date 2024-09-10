@@ -186,23 +186,26 @@
     <div class="container">
         <label>
             <div class="heart">
-                <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Lope.png" alt="Heart Image">
+                <img src="https://i.ibb.co.com/59PJ1BT/Lope.png" alt="Envelope Image">
             </div>
             <input id="messageState" type="checkbox" style="display:none">
         </label>
         <div class="message">
-            <h1>Untuk Kamuu</h1> 
-            <p>Aku ingin memberitahumu banyak hal, tentang betapa saya menyesal karena selama ini terlalu sering mengabaikanmu. Saya sadar bahwa semua tingkah Ku telah merepotkan dan mungkin menyakitimu. Maafkan saya karena tidak selalu mengupayakan yang terbaik untukmu.
+            <h1>singkat saja  </h1> 
+            <p>Jadi kie, kumaha nya nga jelas ken na, langsung saja ke intinya; "naha bet kapikiran"? lain kapikiran sih asa jiga aya rasa bersalah.
+                
+            <br><br>urg apal sih niat na ka mana, ngan tidinya rada tepercaya sikit, maksudteh urng disakola kurang aktif, jarang ngobrol, tidak berprestasi., tapi beda sih mun ker istirahat'mh <i>wkwkwk</i>
+               
+            <br><br> Sabernamah sakola teh salah jurusan kudu na asup RPL, matak rada te niat <i>hehe</i>
 
-            <br><br> Karena aku tak ingin bersama orang lain selain dirimu.
-
-            <br><br>Melihatmu, aku belajar bahwa hidup ini tentang bersyukur dan merasa cukup. Jika kita terus mencari kesempurnaan, kita akan kehilangan orang yang selalu ada untuk kita. Aku tak ingin belajar mencintai orang lain; izinkan aku untuk terus mencintaimu, berulang kali.
-            
-            <br><br>Mari kita wujudkan mimpi-mimpi kita bersama. Aku mencintaimu selalu, dan aku akan selalu menyayangimu.
-            <br><br>Sekian
-            </p> 
+            <br><br> Dengan sadar diri sebesar masa Planet jupiter dan niat seputih inti bintang
+                
+            </p> Sekian 😁
         </div>
     </div>
+
+    <!-- Audio element added -->
+    <audio id="backgroundMusic" src="https://od.lk/s/OV8yNDA0OTUwMDFf/bando%20-%20instrumental.mp3" autoplay preload="auto"></audio>
 
     <script>
         document.addEventListener("keydown", function(event) {
@@ -221,14 +224,14 @@
                 document.querySelector(".message").classList.add("openNor");
                 document.querySelector(".heart").classList.remove("closeHer", "openedHer");
                 document.querySelector(".heart").classList.add("openHer");
-                document.querySelector(".container").style.backgroundColor = "#f48fb1";
+                document.querySelector(".container").style.backgroundColor = "#f5f5dc"; // Warna krem khas surat
                 console.log("I Like You");
             } else {
                 document.querySelector(".message").classList.remove("no-anim");
                 document.querySelector(".message").classList.add("closeNor");
                 document.querySelector(".heart").classList.remove("openHer", "openedHer");
                 document.querySelector(".heart").classList.add("closeHer");
-                document.querySelector(".container").style.backgroundColor = "#fce4ec";
+                document.querySelector(".container").style.backgroundColor = "#ffffff"; // Warna putih
                 console.log("01010");
             }
         });
@@ -248,7 +251,16 @@
                 document.querySelector(".heart").classList.add("no-anim");
             document.querySelector(".heart").classList.remove("openHer", "closeHer", "beating");
         });
+
+        // Optional: Ensure music starts after the page loads
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Audio play was prevented: " + error);
+                });
+            }
+        });
     </script>
 </body>
-          </html>
-          
+</html>
